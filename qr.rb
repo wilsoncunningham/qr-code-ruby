@@ -13,8 +13,10 @@ puts "What kind of QR code would you like to generate?\n
 response = nil
 
 until response == "1" || response == "2" || response == "3" ||response == "4" do
+  if response
+    puts "Didn't recognize that selection. Please try again\n\n"
+  end
   response = gets.chomp
-  puts "Didn't recognize that selection. Please try again\n\n"
 end
 
 if response == "1"
